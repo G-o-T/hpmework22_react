@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(180deg, #E581EF 0%, #FF81CE 100%);
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header {
+  text-align: center;
+  padding: 25px;
+}
+
+.h1 {
+  color: #fff;
+  font-size: 48px;
+}
+
+.cards {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+  padding-bottom: 50px;
+  /* grid-template-rows: repeat(2, 130px); */
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 35px 25px;
+  background-color: #fff;
+  border-radius: 15px;
+  color: #2C2C2C;
+}
+
+.card__column {
+  display: flex;
+  flex-direction: column;
+}
+
+.card__link {
+  display: flex;
+  align-self: flex-end;
+  text-decoration: none;
+  color: #FF81CE;
+  font-size: 16px;
+  /* cursor: pointer; */
+  padding: 25px 0 20px;
+}
+
+/* .card__link:hover {
+  color: #E581EF;
+} */
+
+.h2 {
+  font-size: 32px;
+  padding-bottom: 15px;
+}
+
+.card__title {
+  text-align: end;
+  font-weight: 700;
+
+}
+
+.card__row {
+  display: grid;
+  grid-template-columns: 1.75fr 3fr;
+  padding-bottom: 10px;
+  gap: 10px;
+}
+
+.card__title {
+  font-weight: 700;
+}
+
+.card__img {
+  display: flex;
+  align-self: center;
+  max-width: 320px;
+}
+
+.inert {
+  display: none;
+}
+
+.card__addinfo {
+  padding-bottom: 25px;
+  font-size: 20px;
+}
+
+.card__rate {
+  display: flex;
+  align-self: flex-end; 
+}
+
+.rating {
+  display: flex;
+  align-items: flex-end;
+  font-size: 32px;
+  line-height: 0.75;
+}
+
+.rating__body {
+  position: relative;
+}
+
+.rating__body::before {
+  content: "★★★★★";
+  color: #d8cada;
+  display: block;
+}
+
+.rating__items {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.rating__item {
+  flex: 0 0 20%;
+  height: 100%;
+  opacity: 0%;
+  cursor: pointer;
+}
+
+.rating__active {
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.rating__active::before {
+  content: "★★★★★";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  color: #FF81CE;
+}
+
+.rating__value {
+  font-size: 22px;
+  line-height: 1;
+  padding-left: 10px;
+}
